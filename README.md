@@ -3,6 +3,7 @@
 Análisis de Evasión de Clientes en TelecomX
 
 Descripción General
+
 Este proyecto analiza la evasión de clientes (churn) en TelecomX, una empresa con una alta tasa de abandono (26.54%). Usando Python, Pandas y Matplotlib en Google Colab, se realizó un proceso ETL y un análisis exploratorio de datos para identificar las causas del churn y proponer soluciones.
 
 Problema
@@ -23,27 +24,6 @@ Carga: Se guardó el conjunto de datos limpio como TelecomX_Data_clean.csv.
 Análisis Exploratorio: Se generaron estadísticas descriptivas, correlaciones y visualizaciones (histogramas, boxplots, gráficos de conteo) para identificar patrones de churn.
 
 Informe Final: Se resumieron los hallazgos y se proporcionaron recomendaciones.
-
-Resultados
-Tasa de Churn: 26.54%.
-
-Hallazgos Clave:
-Alto churn en contratos "Month-to-month" (40% de churn frente a <10% en contratos de 1-2 años).
-
-Clientes con tenure < 10 meses tienen mayor probabilidad de abandono.
-
-Charges.Monthly más altos (mediana ~$80 para quienes abandonan vs. $60 para quienes se quedan) se correlacionan con el churn.
-
-La falta de servicios como OnlineSecurity y TechSupport aumenta el churn (por ejemplo, 40% de churn sin TechSupport vs. 15% con el servicio).
-
-Recomendaciones:
-Promover contratos a largo plazo con incentivos.
-
-Optimizar los cargos mensuales altos.
-
-Fomentar la adopción de servicios adicionales como TechSupport.
-
-Mejorar la experiencia de los clientes nuevos (primeros 10 meses).
 
 Archivos
 TelecomX_LATAM.ipynb: Cuaderno Jupyter con el código completo.
