@@ -1,9 +1,13 @@
 # Challenge-TelecomX
+
 Análisis de Evasión de Clientes en TelecomX
+
 Descripción General
 Este proyecto analiza la evasión de clientes (churn) en TelecomX, una empresa con una alta tasa de abandono (26.54%). Usando Python, Pandas y Matplotlib en Google Colab, se realizó un proceso ETL y un análisis exploratorio de datos para identificar las causas del churn y proponer soluciones.
+
 Problema
 TelecomX tiene una tasa de churn del 26.54%, lo que significa que 1 de cada 4 clientes abandona la empresa. El objetivo es determinar las causas de esta alta tasa de evasión.
+
 Datos
 Fuente: TelecomX_Data.json
 
