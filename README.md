@@ -1,50 +1,53 @@
 # Challenge-TelecomX
-
 Análisis de Evasión de Clientes en TelecomX
 
-Descripción General
+Propósito del Análisis
 
-Este proyecto analiza la evasión de clientes (churn) en TelecomX, una empresa con una alta tasa de abandono (26.54%). Usando Python, Pandas y Matplotlib en Google Colab, se realizó un proceso ETL y un análisis exploratorio de datos para identificar las causas del churn y proponer soluciones.
+El propósito de este análisis es identificar las causas del alto índice de evasión de clientes (churn) en TelecomX, que presenta una tasa de abandono del 26.54%. A través de un proceso ETL y un análisis exploratorio de datos, se buscan patrones que expliquen el churn y se proponen estrategias para reducirlo, utilizando Python, Pandas y Matplotlib en Google Colab.
+Estructura del Proyecto y Organización de los Archivos
+TelecomX_LATAM.ipynb: Cuaderno Jupyter que contiene el código completo, dividido en las siguientes secciones:
+Extracción: Carga de datos desde el archivo JSON.
 
-Problema
+Transformación: Limpieza y desanidado de datos.
 
-TelecomX tiene una tasa de churn del 26.54%, lo que significa que 1 de cada 4 clientes abandona la empresa. El objetivo es determinar las causas de esta alta tasa de evasión.
+Carga: Generación del archivo limpio.
 
-Datos
-Fuente: TelecomX_Data.json
+Análisis Exploratorio: Visualizaciones y estadísticas.
 
-Columnas: Incluye customerID, Churn, tenure, Contract, Charges.Monthly, Charges.Total y servicios adicionales como OnlineSecurity y TechSupport.
+Informe Final: Resumen de hallazgos y recomendaciones.
 
-Etapas de Ejecución del Código
-Extracción: Se cargaron los datos JSON usando pd.read_json desde la URL proporcionada.
+TelecomX_Data_clean.csv: Archivo CSV con los datos limpios y transformados, listos para análisis (7,267 filas, 21 columnas).
 
-Transformación: Se desanidaron columnas anidadas, se manejaron nulos (por ejemplo, se imputó Charges.Total como 0 para tenure=0), se convirtió Churn a binario (Yes=1, No=0) y se aseguraron los tipos de datos correctos.
+Gráficos: Las visualizaciones están incluidas en el cuaderno (histogramas, boxplots, gráficos de conteo y matriz de correlación).
 
-Carga: Se guardó el conjunto de datos limpio como TelecomX_Data_clean.csv.
+Ejemplos de Gráficos e Insights Obtenidos
+Distribución de Tenure por Churn  
+Gráfico: Histograma que muestra que los clientes con tenure < 10 meses tienen una alta probabilidad de churn, mientras que aquellos con más de 50 meses tienden a permanecer.  
 
-Análisis Exploratorio: Se generaron estadísticas descriptivas, correlaciones y visualizaciones (histogramas, boxplots, gráficos de conteo) para identificar patrones de churn.
+Insight: Los clientes nuevos son más propensos a abandonar, lo que sugiere problemas de satisfacción inicial.
 
-Informe Final: Se resumieron los hallazgos y se proporcionaron recomendaciones.
+Churn por Tipo de Contrato  
+Gráfico: Gráfico de conteo que indica que los contratos "Month-to-month" tienen un churn del 40%, frente a menos del 10% en contratos de 1 o 2 años.  
 
-Archivos
-TelecomX_LATAM.ipynb: Cuaderno Jupyter con el código completo.
+Insight: Los contratos a corto plazo facilitan la salida de clientes; se deben incentivar contratos largos.
 
-TelecomX_Data_clean.csv: Conjunto de datos limpio.
+Cargos Mensuales por Churn  
+Gráfico: Boxplot que revela que los clientes que abandonan tienen una mediana de Charges.Monthly de ~$80, frente a ~$60 para los que se quedan.  
 
-Visualizaciones: Incluidas en el cuaderno (por ejemplo, distribución de tenure, churn por tipo de contrato).
+Insight: Los cargos mensuales altos están asociados con el churn, indicando sensibilidad al precio.
 
-Cómo Ejecutar
-Abre TelecomX_LATAM.ipynb en Google Colab.
+Churn por Servicios Adicionales (ejemplo: TechSupport)  
+Gráfico: Gráfico de conteo que muestra un churn del 40% en clientes sin TechSupport, frente al 15% en los que sí lo tienen.  
 
-Ejecuta las celdas en orden para realizar el ETL, el análisis y ver los resultados.
+Insight: La falta de servicios como TechSupport y OnlineSecurity aumenta el churn; estos servicios mejoran la lealtad.
 
-Revisa el informe final en el cuaderno para obtener información detallada.
+Instrucciones para Ejecutar el Notebook
+Abre el archivo TelecomX_LATAM.ipynb en Google Colab.
 
-Dependencias
-Python 3
+Asegúrate de tener instaladas las dependencias: Python 3, Pandas, Matplotlib y Seaborn (ya incluidas en Colab por defecto).
 
-Pandas
+Ejecuta las celdas en orden para realizar el proceso ETL, el análisis exploratorio y visualizar los resultados.
 
-Matplotlib
+Revisa el informe final al final del cuaderno para ver los hallazgos y recomendaciones detalladas.
 
-Seaborn
+Opcionalmente, descarga el archivo TelecomX_Data_clean.csv desde la pestaña de "Archivos" en Colab para trabajar con los datos limpios.
